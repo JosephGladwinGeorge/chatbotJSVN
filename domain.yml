@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - fisat
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Greetings! How are you?"
+  - text: "Hello there! How are you?"
+
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:\nhttps://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  - text: "Wonderful, keep going!"
+  - text: "Excellent, carry on!"
+
+
+  utter_goodbye:
+  - text: "Bye!"
+  - text: "Good-Bye!"
+  - text: "See you later!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Team JSVN."
+
+  
+  utter_fisat:
+  - text: "Federal Institute of Science And Technology is a private, self-financing engineering college, established and run by the Federal Bank Officers' Association Educational Society. It is located in Angamaly. It is one of the top private engineering colleges in Kerala." 
+  - text: "Federal Institute of Science And Technology in Angamaly is a private, self-financing engineering college, established and run by the Federal Bank Officers' Association Educational Society. It is one of the top private engineering colleges in Kerala."
+  - text: "Established and run by Federal Bank Officers' Association Educational Society, Federal Institute of Science And Technology in Angamaly is a private, self-financing engineering college. It is one of the top private engineering colleges in Kerala."
+
