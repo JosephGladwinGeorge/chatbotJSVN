@@ -1,0 +1,3 @@
+responses:
+  utter_fare_kmrl:
+  - text: "The fare structure is divided as four slabs of Rs10, Rs 15, Rs 20, Rs 30, Rs 40 and Rs 50 according to the distance covered. Please note that these fares are subject to changes."

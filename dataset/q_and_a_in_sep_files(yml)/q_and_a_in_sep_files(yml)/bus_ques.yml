@@ -1,0 +1,5 @@
+intent: bus
+examples: |
+  - Are there any feeder bus services connected to the metro stations?
+  - If there any feeder bus services available at metro stations?
+  - Tell about if there feeder bus services available at metro stations?  

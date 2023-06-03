@@ -1,0 +1,5 @@
+intent: wifi
+examples: |
+  - Is Wi-Fi available on the metro trains or at the stations?
+  - Whether Wi-Fi is available in kochi metro?
+  - Tell me about if Wi-Fi available in kochi metro? 

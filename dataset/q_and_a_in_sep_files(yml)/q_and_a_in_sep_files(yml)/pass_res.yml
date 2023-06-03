@@ -1,0 +1,3 @@
+responses:
+  utter_pass:
+  - text: "A single day pass costs Rs 125."

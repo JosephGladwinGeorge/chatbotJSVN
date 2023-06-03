@@ -1,0 +1,3 @@
+responses:
+  utter_robot:
+  - text: "Mika. It was developed by FISAT under the guidance of Kochi metro to answer queries related to Kochi metro, guide and assist the travellers of the Kochi metro."
