@@ -31,7 +31,6 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
 actions:
-  - action_session_start
   - action_cgpa
 
 
