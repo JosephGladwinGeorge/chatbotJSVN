@@ -32,6 +32,16 @@ from rasa_sdk.executor import CollectingDispatcher
 import mysql.connector
 from mysql.connector import Error
 print("started")
+try:
+    connection = mysql.connector.connect(
+                    host='localhost',
+                    user='root',
+                    password='avengers007',
+                    database='studentdata'
+                )
+except Error as e:
+            # Handle any errors that occur during the database connection or query execution
+            print(f"Error connecting to MySQL: {e}")
 
 # class ActionSessionStart(Action):
 #     def name(self) -> Text:
@@ -45,27 +55,27 @@ print("started")
 
 #         try:
 #             # Connect to the MySQL database
-#             connection = mysql.connector.connect(
-#                 host='localhost',
-#                 user='root',
-#                 password='avengers007',
-#                 database='studentdata'
-#             )
+#             # connection = mysql.connector.connect(
+#             #     host='localhost',
+#             #     user='root',
+#             #     password='avengers007',
+#             #     database='studentdata'
+#             # )
 
-#             # Execute your SQL query using the conversation_id
-#             query = f"SELECT mark FROM result WHERE student_id = '{student_id}'"
-#             cursor = connection.cursor()
-#             cursor.execute(query)
+#             # # Execute your SQL query using the conversation_id
+#             # query = f"SELECT mark FROM result WHERE student_id = '{student_id}'"
+#             # cursor = connection.cursor()
+#             # cursor.execute(query)
 
-#             # Fetch the results
-#             results = cursor.fetchall()
+#             # # Fetch the results
+#             # results = cursor.fetchall()
 
-#             # Perform any necessary actions with the query results
-#             print(results)
-#             dispatcher.utter_message("mark = ",results)
-#             # Close the cursor and database connection
-#             cursor.close()
-#             connection.close()
+#             # # Perform any necessary actions with the query results
+#             # print(results)
+#             # dispatcher.utter_message("mark = ",results)
+#             # # Close the cursor and database connection
+#             # cursor.close()
+#             # connection.close()
 
 #         except Error as e:
 #             # Handle any errors that occur during the database connection or query execution
@@ -84,12 +94,12 @@ class ActionCgpa(Action):
         print(student_id)
 
         try:
-            connection = mysql.connector.connect(
-                host='localhost',
-                user='root',
-                password='avengers007',
-                database='studentdata'
-            )
+            # connection = mysql.connector.connect(
+            #     host='localhost',
+            #     user='root',
+            #     password='avengers007',
+            #     database='studentdata'
+            # )
             query = f"SELECT year_1_cgpa FROM main_table WHERE user_id = '{student_id}'"
             cursor = connection.cursor()
             cursor.execute(query)
@@ -98,13 +108,43 @@ class ActionCgpa(Action):
 
             # Perform any necessary actions with the query results
             print(results)
-            #print(int(results))
-            dispatcher.utter_message("your cgpa is ",results)
+            mark=float((results[0])[0])
+            ans = f"your cgpa is {mark}"
+            dispatcher.utter_message(ans)
             cursor.close()
-            connection.close()
 
         except Error as e:
             # Handle any errors that occur during the database connection or query execution
-            print(f"Error connecting to MySQL: {e}")
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
 
         return []
+    
+class ActionCgpaYear(Action):
+    def name(self) -> Text:
+        return "action_cgpa_year"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        student_id = tracker.sender_id
+        year = tracker.get_slot('year')
+        try:
+            query = f"SELECT year_{year}_cgpa FROM main_table WHERE user_id = '{student_id}'"
+            cursor = connection.cursor()
+            cursor.execute(query)
+
+            results = cursor.fetchall()
+            
+            print(results)
+
+            mark=float((results[0])[0])
+            ans = f"your cgpa is {mark}"
+            dispatcher.utter_message(ans)
+            cursor.close()
+
+        except Error as e:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+        

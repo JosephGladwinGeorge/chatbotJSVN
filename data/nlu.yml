@@ -96,3 +96,63 @@ nlu:
     - show my cgpa
     - tell me my cgpa
     - how much is my cgpa
+
+- intent: cgpa_year
+  examples: |
+    - what is my year [1](year) cgpa
+    - what is my year [2](year) cgpa
+    - what is my year [3](year) cgpa
+    - what is my year [4](year) cgpa
+    - [2](year)st year cgpa
+    - [1](year)st year cgpa
+    - [3](year)st year cgpa
+    - [4](year)st year cgpa
+    - year [3](year) cgpa
+    - year [2](year) cgpa
+    - year [1](year) cgpa
+    - year [4](year) cgpa
+    - [4th](year) year cgpa
+    - [3rd](year) year cgpa
+    - [2nd](year) year cgpa
+    - [1st](year) year cgpa
+
+
+
+- intent: sem_total
+  examples: |
+    - what is my [sem 1](sem) [series 1](series) marks
+
+- intent: sub_mark
+  examples: |
+    - what is my [coa](sub) marks
+
+entity_synonyms:
+- synonym: 1
+  examples: |
+    - 1
+    - first
+    - First
+    - 1st
+- synonym: 2
+  examples: |
+    - 2
+    - second
+    - Second
+    - 2nd
+- synonym: 3
+  examples: |
+    - 3
+    - third
+    - Third
+    - 3rd
+- synonym: 4
+  examples: |
+    - 4
+    - fourth
+    - Fourth
+    - 4th
+- synonym: cst202
+  examples: |
+    - coa
+    - computer organisation and architrcture
+    - computer organisation

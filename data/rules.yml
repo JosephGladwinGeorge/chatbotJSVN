@@ -16,3 +16,8 @@ rules:
   steps:
   - intent: cgpa
   - action: action_cgpa
+
+- rule: cgpa_year happypath
+  steps:
+  - intent: cgpa_year
+  - action: action_cgpa_year

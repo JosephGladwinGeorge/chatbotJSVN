@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - cgpa
+  - cgpa_year
 
 responses:
   utter_greet:
@@ -32,6 +33,7 @@ responses:
 
 actions:
   - action_cgpa
+  - action_cgpa_year
 
 
 session_config:
