@@ -25,8 +25,8 @@ pipeline:
   - name: RegexEntityExtractor
     case_sensitive: False
     use_lookup_tables: True
-    lookup_tables:
-      sub : dataset/subjectcode.csv
+    # lookup_tables:
+    #   sub : dataset/subjectcode.csv
     use_regexes: True
   - name: DIETClassifier
     epochs: 100

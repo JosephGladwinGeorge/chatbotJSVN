@@ -11,6 +11,8 @@ intents:
   - cgpa
   - cgpa_year
   - sem_total
+  - sub_mark
+  - sub_mark_series
 
 responses:
   utter_greet:
@@ -36,6 +38,7 @@ entities:
   - year
   - sem
   - series
+  - sub
 
 slots:
   year:
@@ -53,11 +56,18 @@ slots:
     mappings:
       - type: from_entity
         entity: series
+  sub:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sub
 
 actions:
   - action_cgpa
   - action_cgpa_year
   - action_sem_total
+  - action_sub_mark
+  - action_sub_mark_series
   - fallback_action
 
 

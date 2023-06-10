@@ -186,7 +186,61 @@ class ActionSubMark(Action):
     
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
         sub = tracker.get_slot('sub')
-        query = f"SELECT series_1,series_2 FROM  "
+        user_id = tracker.sender_id
+        try:
+            q = f"SELECT subject_sem from semester_subject where subject_code='{sub}'"
+            cursor = connection.cursor()
+            cursor.execute(q)
+
+            sem = cursor.fetchall()
+            print(sem[0][0])
+
+            query = f"SELECT series_1,series_2 FROM {sem[0][0]} where subject='{sub}' AND user_id='{user_id}'"
+            cursor.execute(query)
+
+            mark = cursor.fetchall()
+
+            table = "| Series 1 | Series 2 |\n"
+            table += "|----------|----------|\n"
+
+            for row in mark:
+                table += "|    {}    |    {}    |\n".format(row[0], row[1])
+                    
+            print(table)
+            msg = f"Here is your {sub} results:\n {table}"
+            dispatcher.utter_message(msg)
+            cursor.close()
+        except:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+class ActionSubMarkSeries(Action):
+    def name(self) -> Text:
+        return "action_sub_mark_series"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
+        sub = tracker.get_slot('sub')
+        user_id = tracker.sender_id
+        series = tracker.get_slot('series')
+        try:
+            q = f"SELECT subject_sem from semester_subject where subject_code='{sub}'"
+            cursor = connection.cursor()
+            cursor.execute(q)
+
+            sem = cursor.fetchall()
+            print(sem[0][0])
+
+            query = f"SELECT series_{series} FROM {sem[0][0]} where subject='{sub}' AND user_id='{user_id}'"
+            cursor.execute(query)
+
+            mark = cursor.fetchall()
+                    
+            msg = f"{mark[0][0]}"
+            dispatcher.utter_message(msg)
+            cursor.close()
+        except:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
 
 class FallbackAction(Action):
     def name(self) -> Text:

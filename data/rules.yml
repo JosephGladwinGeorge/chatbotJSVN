@@ -27,6 +27,16 @@ rules:
   - intent: sem_total
   - action: action_sem_total
 
+- rule: sub_mark
+  steps:
+  - intent: sub_mark
+  - action: action_sub_mark
+
+- rule: sub_mark_series
+  steps:
+  - intent: sub_mark_series
+  - action: action_sub_mark_series
+
 
 - rule: no_entity
   condition:

@@ -1,0 +1,15 @@
+- intent: sub_mark_series
+  examples: |
+    - what is my [coa](sub) marks in series [2](series)
+#only specified series marks will be shown
+
+- intent: sem_attendance%
+  examples: |
+    - what is my attendance% for sem [4](sem)
+    - what is my attendance for sem [2](sem)
+    - what is my attendance percentage for sem [4](sem)
+#just %
+- intent: attendance_detail
+  examples: |
+    - show me the detailed attendance for sem [5](sem)
+#detailed attendance
