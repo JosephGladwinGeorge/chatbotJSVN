@@ -147,4 +147,57 @@ class ActionCgpaYear(Action):
             print(f"Error parsing database: {e}")
             dispatcher.utter_message("Error parsing database")
 
+class ActionSemTotal(Action):
+    def name(self) -> Text:
+        return "action_sem_total"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        student_id = tracker.sender_id
+        sem = tracker.get_slot('sem')
+        series = tracker.get_slot('series')
+        try:
+            query = f"select subject,series_{series} from semester_{sem} where user_id = '{student_id}'"
+            cursor = connection.cursor()
+            cursor.execute(query)
+
+            rows = cursor.fetchall()
+
+            table = "| Subject | Mark |\n"
+            table += "|----------|----------|\n"
+
+            for row in rows:
+                table += "| {} | {} |\n".format(row[0], row[1])
+            
+            print(table)
+
+            msg = f"Here is your Semester_{sem} Series_{series} results:\n {table}"
+            dispatcher.utter_message(msg)
+            cursor.close()
+
+        except Error as e:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+class ActionSubMark(Action):
+    def name(self) -> Text:
+        return "action_sub_mark"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
+        sub = tracker.get_slot('sub')
+        query = f"SELECT series_1,series_2 FROM  "
+
+class FallbackAction(Action):
+    def name(self) -> Text:
+        return "fallback_action"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Handle case when no entity is recognized
+        # Perform any desired actions, prompts, or fallback behavior
+        # For example, you could ask the user to rephrase or provide more information
+        dispatcher.utter_message("Unrecognized entity")
+
+        return []
+
         
