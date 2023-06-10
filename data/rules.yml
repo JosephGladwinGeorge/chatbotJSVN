@@ -21,3 +21,15 @@ rules:
   steps:
   - intent: cgpa_year
   - action: action_cgpa_year
+
+- rule: semester_total_marks
+  steps:
+  - intent: sem_total
+  - action: action_sem_total
+
+
+- rule: no_entity
+  condition:
+    - active_loop: null
+  steps:
+    - action: fallback_action

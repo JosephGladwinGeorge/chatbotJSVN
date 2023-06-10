@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - cgpa
   - cgpa_year
+  - sem_total
 
 responses:
   utter_greet:
@@ -31,9 +32,33 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+entities:
+  - year
+  - sem
+  - series
+
+slots:
+  year:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: year
+  sem:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sem
+  series:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: series
+
 actions:
   - action_cgpa
   - action_cgpa_year
+  - action_sem_total
+  - fallback_action
 
 
 session_config:

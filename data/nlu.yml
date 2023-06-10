@@ -103,10 +103,10 @@ nlu:
     - what is my year [2](year) cgpa
     - what is my year [3](year) cgpa
     - what is my year [4](year) cgpa
-    - [2](year)st year cgpa
-    - [1](year)st year cgpa
-    - [3](year)st year cgpa
-    - [4](year)st year cgpa
+    - [2nd](year) year cgpa
+    - [1st](year) year cgpa
+    - [3rd](year) year cgpa
+    - [4th](year) year cgpa
     - year [3](year) cgpa
     - year [2](year) cgpa
     - year [1](year) cgpa
@@ -115,44 +115,346 @@ nlu:
     - [3rd](year) year cgpa
     - [2nd](year) year cgpa
     - [1st](year) year cgpa
+    - what is my cgpa in [first](year) year
+    - what is my cgpa in [second](year) year
+    - what is my cgpa in [third](year) year
+    - what is my cgpa in [fourth](year) year
+    - [first](year) cgpa
+    - [second](year) cgpa
+    - [third](year) cgpa
+    - [fourth](year) cgpa
+
+- lookup: year
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+
+- lookup: sem
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+
+- lookup: series
+  examples: |
+    - 1
+    - 2
+
 
 
 
 - intent: sem_total
   examples: |
-    - what is my [sem 1](sem) [series 1](series) marks
+    - what is my sem [1](sem) series [1](series) marks
+    - what is my sem [1](sem) series [1](series) grades
+    - [1st](sem) Semester marks series [2](series)
+    - [1st](sem) Semester grades series [2](series)
+    - What are my sem [3](sem) series [2](series) marks?
+    - Can you provide the grades for sem [7](sem) series [1]series?
+    - I want to know my sem [4](sem) series [2](series) marks.
+    - Please give me the total marks for sem [2](sem) series [1](series).
+    - What is the result of sem [5](sem) series [2](series)?
+    - I need the grades for sem [8](sem) series [1](series) subjects.
+    - Could you tell me the marks obtained in sem [1](sem) series [2](series?
+    - What are the grades for sem [6](sem) series [1](series)?
+    - I want to check my sem [2](sem) series [2](series) result.
+    - Please provide the marks for sem [4](sem) series [1](series).
+    - Can you show me the marks for sem [6](sem) series [2](series)?
+    - What are the grades for sem [3](sem) series [1](series)?
+    - I'm curious about my sem [5](sem) series [2](series) results.
+    - Provide the total marks for sem [1](sem) series [1](series), please.
+    - What is the overall grade for sem [8](sem) series [2](series)?
+    - Could you give me the marks obtained in sem [7](sem) series [1](series)?
+    - I want to know my sem [2](sem) series [1](series) scores.
+    - Please show me the grades for sem [4](sem) series [2](series).
+    - What are the marks for sem [3](sem) series [2](series)?
+    - Provide the grades for sem [6](sem) series [1](series).
+    - What is my sem [1](sem) series [1](series) marks?
+    - Can you provide the grades for [1st](sem) semester series [1](series)?
+    - I want to know my [2nd](sem) sem series [2](series) marks.
+    - Please give me the total marks for [3rd](sem) semester series [2](series).
+    - What is the result of [fourth](sem) sem series [1](series)?
+    - I need the grades for [fifth](sem) semester series [2](series) subjects.
+    - Could you tell me the marks obtained in [second](sem) sem [1st](series) series?
+    - What are the grades for [1st](sem) sem series [2](series)?
+    - I want to check my [6th](sem) semester series [1](series) result.
+    - Please provide the marks for [seventh](sem) sem series [2](series).
+    - Can you show me the marks for [first](sem) semester series [2](series)?
+    - What are the grades for [third](sem) sem series [1](series)?
+    - I'm curious about my [second](sem) sem [2nd](series) series results.
+    - Provide the total marks for [4th](sem) semester [1st](series), please.
+    - What is the overall grade for [fifth](sem) sem series [2](series)?
+    - Could you give me the marks obtained in [1st](sem) sem series [1](series)?
+    - I want to know my [3rd](sem) semester series [2](series) scores.
+    - Please show me the grades for [6th](sem) sem [first](series).
+    - What are the marks for [seventh](sem) semester series [2](series)?
+    - Provide the grades for [2nd](sem) sem series [1](series).
+    - What are my series [2](series) sem [1](sem) marks?
+    - Can you provide the grades for series [1](series) [1st](sem) semester?
+    - I want to know my series [2](series) [2nd](sem) sem marks.
+    - Please give me the total marks for series [1](series) [3rd](sem) semester.
+    - What is the result of series [1](series) [fourth](sem) sem?
+    - I need the grades for series [2](series) [fifth](sem) semester subjects.
+    - Could you tell me the marks obtained in series [1](series) [second](sem) sem?
+    - What are the grades for series [2](series) [1st](sem) sem?
+    - I want to check my series [1](series) [6th](sem) semester result.
+    - Please provide the marks for series [2](series) [seventh](sem) sem.
+
 
 - intent: sub_mark
   examples: |
     - what is my [coa](sub) marks
+    - how much is my score for [coa](sub)
+    - what is my [os](sub) marks
+    - how did I score in [dbms](sub)
+    - show me my marks for [algorithms](sub)
+    - what are my grades for [networking](sub)
+    - how well did I do in [ai](sub)
+    - tell me the marks for [programming](sub)
+    - show my score in [data structures](sub)
+    - what is my result for [web development](sub)
+    - What are my marks in [Operating Systems](sub)?
+    - Show me the score for [Database Management Systems](sub).
+    - Can you tell me my grade for [Algorithms](sub)?
+    - How well did I do in [Computer Networks](sub)?
+    - What is my result in [Artificial Intelligence](sub)?
+    - Show my marks for [Web Development](sub) please.
+    - Tell me how I scored in [Data Structures](sub).
+    - What are my grades for [Software Engineering](sub)?
+    - Can you provide the marks for [Machine Learning](sub)?
+    - How much did I score in [Computer Architecture](sub)?
+    - Show me my result for [Network Security](sub).
+    - What are the marks for [Operating System Design](sub)?
+    - How well did I perform in [Computer Graphics](sub)?
+    - What are my marks in [ESL120](sub)?
+    - Show me the score for [EST100](sub).
+    - Can you tell me my grade for [EST120](sub)?
+    - How well did I do in [HUN101](sub)?
+    - What is my result in [MAT101](sub)?
+    - Show my marks for [PHL120](sub) please.
+    - Tell me how I scored in [ESL120](sub).
+    - What are my grades for [EST100](sub)?
+    - Can you provide the marks for [EST120](sub)?
+    - How much did I score in [HUN101](sub)?
+    - Show me my result for [MAT101](sub).
+    - What are the marks for [PHL120](sub)?
+    - How well did I perform in [ESL120](sub)?
+#both series 1 & 2 marks will be shown
+- intent: sub_mark_series
+  examples: |
+    - what is my [coa](sub) marks in series [2](series)
+#only specified series marks will be shown
 
-entity_synonyms:
-- synonym: 1
+- intent: sem_attendance%
+  examples: |
+    - what is my attendance% for sem [4](sem)
+    - what is my attendance for sem [2](sem)
+    - what is my attendance percentage for sem [4](sem)
+#just %
+- intent: attendance_detail
+  examples: |
+    - show me the detailed attendance for sem [5](sem)
+#detailed attendance
+
+
+- synonym: '1'
   examples: |
     - 1
     - first
     - First
     - 1st
-- synonym: 2
+- synonym: '2'
   examples: |
     - 2
     - second
     - Second
     - 2nd
-- synonym: 3
+- synonym: '3'
   examples: |
     - 3
     - third
     - Third
     - 3rd
-- synonym: 4
+- synonym: '4'
   examples: |
     - 4
     - fourth
     - Fourth
     - 4th
-- synonym: cst202
+- synonym: '5'
+  examples: |
+    - 5
+    - fifth
+    - Fifth
+    - 5th
+- synonym: '6'
+  examples: |
+    - 6
+    - sixth
+    - Sixth
+    - 6th
+- synonym: '7'
+  examples: |
+    - 7
+    - seventh
+    - Seventh
+    - 7th
+- synonym: '8'
+  examples: |
+    - 8
+    - eighth
+    - Eighth
+    - 8th
+
+
+- synonym: CST202
   examples: |
     - coa
     - computer organisation and architrcture
     - computer organisation
+
+- synonym: EST100
+  examples: |
+    - engineering mechanics
+    - EM
+    - em
+    - mechanics
+    - Mechanics
+    - est 100
+    - est100
+    - est-100
+    - est 100 engineering mechanics
+    - est100 engineering mechanics
+    - est-100 engineering mechanics
+    - est 100 em
+    - est100 em
+    - est-100 em
+    - est 100 mechanics
+    - est100 mechanics
+    - est-100 mechanics
+
+- synonym: EST100
+  examples: |
+    - engineering mechanics
+    - EM
+    - em
+    - mechanics
+    - Mechanics
+    - est 100
+    - est100
+    - est-100
+    - est 100 engineering mechanics
+    - est100 engineering mechanics
+    - est-100 engineering mechanics
+    - est 100 em
+    - est100 em
+    - est-100 em
+    - est 100 mechanics
+    - est100 mechanics
+    - est-100 mechanics
+
+- synonym: EST120
+  examples: |
+    - Basics of Civil and Mechanical Engineering
+    - BME BCE
+    - bme bce
+    - bce/bme
+    - bme/bce
+    - bce
+    - bme
+    - BCE
+    - BME
+    - est 120
+    - civil
+    - mechanical
+    - civil and mechanical
+    - civil & mechanical
+    - civil and mechanical engineering
+    - civil & mechanical engineering
+    - civil engineering
+    - mechanical engineering
+    - civil and mechanical engineering basics
+    - civil & mechanical engineering basics
+    - civil and mechanical basics
+    - civil & mechanical basics
+
+- synonym: HUN101
+  examples: |
+    - hun 101
+    - life skills
+    - Life Skills
+    - LS
+    - ls
+    - hun101
+    - hun-101
+    - hun 101 life skills
+    - hun101 life skills
+    - hun-101 life skills
+    - hun 101 ls
+    - hun101 ls
+    - hun-101 ls
+
+- synonym: MAT101
+  examples: |
+    - linear algebra and Calculus
+    - linear algebra
+    - calculus
+    - Linear Algebra and Calculus
+    - Linear Algebra
+    - Calculus
+    - LA
+    - la
+    - calculus and linear algebra
+    - calculus & linear algebra
+    - calculus and la
+    - calculus & la
+    - linear algebra and calculus
+    - linear algebra & calculus
+    - linear algebra and la
+    - linear algebra & la
+    - mat 101
+    - mat101
+    - mat-101
+    - mat 101 linear algebra and calculus
+    - mat101 linear algebra and calculus
+    - mat-101 linear algebra and calculus
+    - mat 101 linear algebra
+    - mat101 linear algebra
+    - mat-101 linear algebra
+    - mat 101 calculus
+    - mat101 calculus
+    - mat-101 calculus
+    - mat 101 la
+    - mat101 la
+    - mat-101 la
+  
+- synonym: PHT100
+  examples: |
+    - engineering physics
+    - Engineering Physics
+    - EP
+    - ep
+    - engineering phy
+    - Engineering Phy
+    - phy 100
+    - phy100
+    - phy-100
+    - phy 100 engineering physics
+    - phy100 engineering physics
+    - phy-100 engineering physics
+    - phy 100 engineering phy
+    - phy100 engineering phy
+    - phy-100 engineering phy
+    - phy 100 ep
+    - phy100 ep
+    - phy-100 ep
+
+
+

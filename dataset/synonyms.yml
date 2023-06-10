@@ -1,0 +1,119 @@
+version: "2.0"
+
+nlu:
+  - synonym: EST100
+    examples: |
+      - engineering mechanics
+      - EM
+      - em
+      - mechanics
+      - Mechanics
+      - est 100
+      - est100
+      - est-100
+      - est 100 engineering mechanics
+      - est100 engineering mechanics
+      - est-100 engineering mechanics
+      - est 100 em
+      - est100 em
+      - est-100 em
+      - est 100 mechanics
+      - est100 mechanics
+      - est-100 mechanics
+
+  - synonym: EST120
+    examples: |
+      - Basics of Civil and Mechanical Engineering
+      - BME BCE
+      - bme bce
+      - bce/bme
+      - bme/bce
+      - bce
+      - bme
+      - BCE
+      - BME
+      - est 120
+      - civil
+      - mechanical
+      - civil and mechanical
+      - civil & mechanical
+      - civil and mechanical engineering
+      - civil & mechanical engineering
+      - civil engineering
+      - mechanical engineering
+      - civil and mechanical engineering basics
+      - civil & mechanical engineering basics
+      - civil and mechanical basics
+      - civil & mechanical basics
+
+  - synonym: HUN101
+    examples: |
+      - hun 101
+      - life skills
+      - Life Skills
+      - LS
+      - ls
+      - hun101
+      - hun-101
+      - hun 101 life skills
+      - hun101 life skills
+      - hun-101 life skills
+      - hun 101 ls
+      - hun101 ls
+      - hun-101 ls
+
+  - synonym: MAT101
+    examples: |
+      - linear algebra and Calculus
+      - linear algebra
+      - calculus
+      - Linear Algebra and Calculus
+      - Linear Algebra
+      - Calculus
+      - LA
+      - la
+      - calculus and linear algebra
+      - calculus & linear algebra
+      - calculus and la
+      - calculus & la
+      - linear algebra and calculus
+      - linear algebra & calculus
+      - linear algebra and la
+      - linear algebra & la
+      - mat 101
+      - mat101
+      - mat-101
+      - mat 101 linear algebra and calculus
+      - mat101 linear algebra and calculus
+      - mat-101 linear algebra and calculus
+      - mat 101 linear algebra
+      - mat101 linear algebra
+      - mat-101 linear algebra
+      - mat 101 calculus
+      - mat101 calculus
+      - mat-101 calculus
+      - mat 101 la
+      - mat101 la
+      - mat-101 la
+  
+  - synonym: PHT100
+    examples: |
+      - engineering physics
+      - Engineering Physics
+      - EP
+      - ep
+      - engineering phy
+      - Engineering Phy
+      - phy 100
+      - phy100
+      - phy-100
+      - phy 100 engineering physics
+      - phy100 engineering physics
+      - phy-100 engineering physics
+      - phy 100 engineering phy
+      - phy100 engineering phy
+      - phy-100 engineering phy
+      - phy 100 ep
+      - phy100 ep
+      - phy-100 ep
+
