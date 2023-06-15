@@ -1,0 +1,358 @@
+- intent: sub_mark_series
+  examples: |
+    - what is my [EM](sub) marks in series [1](series)
+    - what is my [EM](sub) marks in series [2](series)
+    - Can you provide my marks in [EM](sub) for series [2](series)?
+    - Can you provide my marks in [EM](sub) for series [1](series)?
+    - What are my marks for [EM](sub) in series [1](series)?
+    - What are my marks for [EM](sub) in series [2](series)?
+    - How did I perform in [Engineering Mechanics](sub) in series [1](series)
+    - How did I perform in [Engineering Mechanics](sub) in series [2](series)
+    - How did I perform in [Engineering Mechanics](sub) in series [2](series)
+    - Please provide me with my marks for [est 100](sub) in series [2](series)
+    - Please provide me with my marks for [est 100](sub) in series [1](series)
+    - Can you inform me about my marks in [est 100](sub) for series [1](series)?
+    - Can you inform me about my marks in [est 100](sub) for series [2](series)?
+    - What are my marks in [est 100](sub) for series [1](series)?
+    - What are my marks in [est 100](sub) for series [2](series)?
+    - What were my marks in [est 100](sub) for series [1](series)?
+    - What were my marks in [est 100](sub) for series [2](series)?
+    - How well did I do in [est 100](sub) in series [1](series)?
+    - How well did I do in [est 100](sub) in series [2](series)?
+    - What were my marks in [est100](sub) for series [2](series)?
+    - Tell me my marks in [est100](sub) for series [2](series)
+    - What was my performance in [est100](sub) for series [1](series)?
+    - What was my performance in [est100](sub) for series [2](series)?
+    - What was my performance in [est 100](sub) for series [1](series)?
+    - Could you please tell me my marks in [Engineering Mechanics](sub) for series [2](series)
+    - Could you please tell me my marks in [Engineering Mechanics](sub) for series [1](series)
+    - What were my marks in [Basics of Civil and Mechanical Engineering](sub) for series [2](series)
+    - What were my marks in [Basics of Civil and Mechanical Engineering](sub) for series [1](series)
+    - How well did I do in [Basics of Civil and Mechanical Engineering](sub) in series [1](series)
+    - How well did I do in [Basics of Civil and Mechanical Engineering](sub) in series [2](series)
+    - What were my marks in [BME BCE](sub) for series [2](series)
+    - Tell me my marks in [BME BCE](sub) for series [2](series)
+    - What was my performance in [LS](sub) for series [1](series)?
+    - What was my performance in [LS](sub) for series [2](series)?
+    - What was my performance in [linear Algebra](sub) for series [1](series)?
+    - What was my performance in [linear Algebra](sub) for series [2](series)?
+    - What was my performance in [Physics](sub) for series [1](series)?
+    - What was my performance in [Physics](sub) for series [2](series)?
+    - What was my performance in [BME](sub) for series [1](series)?
+    - What was my performance in [BME](sub) for series [2](series)?
+    - What was my performance in [BCE](sub) for series [1](series)?
+    - What was my performance in [BCE](sub) for series [2](series)?
+    - What was my performance in [Engineering Physics](sub) for series [1](series)?
+    - What was my performance in [Engineering Physics](sub) for series [2](series)?
+    - Tell me my marks in [BME BCE](sub) for series [1](series)
+    - what is my [Engineering Mechanics](sub) marks in series [1](series)
+    - what is my [Engineering Mechanics](sub) marks in series [2](series)
+    - what is my [EST100](sub) marks in series [1](series)
+    - what is my [EST100](sub) marks in series [2](series)
+    - what is my [est 100](sub) marks in series [1](series)
+    - what is my [est 100](sub) marks in series [2](series)
+    - what is my [Basics of Civil and Mechanical Engineering](sub) marks in series [1](series)
+    - what is my [Basics of Civil and Mechanical Engineering](sub) marks in series [2](series)
+    - what is my [BME BCE](sub) marks in series [2](series)
+    - what is my [BME BCE](sub) marks in series [1](series)
+    - what is my [LS](sub) marks in series [1](series)
+    - what is my [LS](sub) marks in series [2](series)
+    - what is my [linear Algebra](sub) marks in series [2](series)
+    - what is my [linear Algebra](sub) marks in series [1](series)
+    - what is my [Physics](sub) marks in series [1](series)
+    - what is my [Physics](sub) marks in series [2](series)
+    - what is my [BME](sub) marks in series [1](series)
+    - what is my [BME](sub) marks in series [2](series)
+    - what is my [BCE](sub) marks in series [1](series)
+    - what is my [BCE](sub) marks in series [2](series)
+    - what is my [Engineering Physics](sub) marks in series [1](series)
+    - what is my [Engineering Physics](sub) marks in series [2](series)
+    - what is my [Engineering Mechanics](sub) marks in series [1](series)
+    - what is my [Engineering Mechanics](sub) marks in series [2](series)
+    - what is my [Engineering Chemistry](sub) marks in series [1](series)
+    - what is my [Engineering Chemistry](sub) marks in series [2](series)
+    - Tell me my marks in [Engineering Chemistry](sub) for series [1](series)
+    - Tell me my marks in [Engineering Chemistry](sub) for series [2](series)
+    - [Engineering Chemistry](sub) mark series [1](series)
+    - [Engineering Chemistry](sub) mark series [2](series)
+    - [Engineering Chemistry](sub) marks series [1](series)
+    - [Engineering Chemistry](sub) marks series [2](series)
+    - [Engineering physics](sub) mark series [1](series)
+    - [Engineering physics](sub) mark series [2](series)
+    - [Engineering physics](sub) marks series [1](series)
+    - [Engineering physics](sub) marks series [2](series)
+    - [C Programming](sub) mark series [1](series)
+    - [C Programming](sub) mark series [2](series)
+    - What were my marks in [C Programming](sub) for series [1](series)?
+    - What were my marks in [C Programming](sub) for series [2](series)?
+    - What was my performance in [C Programming](sub) for series [1](series)?
+    - What was my performance in [C Programming](sub) for series [2](series)?
+    - Tell me my marks in [CP](sub) for series [2](series)
+    - Tell me my marks in [CP](sub) for series [1](series)
+    - what is my [Chemistry](sub) marks in series [1](series)
+    - what is my [Chemistry](sub) marks in series [2](series)
+    - what is my [CP](sub) marks in series [1](series)
+    - what is my [CP](sub) marks in series [2](series)
+    - what is my [C programming](sub) marks in series [1](series)
+    - what is my [C programming](sub) marks in series [2](series)
+    - what is my [coa](sub) marks in series [2](series)
+    - what is my [coa](sub) marks in series [1](series)
+    - What are my marks in series [2](series) for the subject [BME](sub)?
+    - Can you provide my marks for series [1](series) in the subject [BCE](sub)?
+    - What were my marks in series [2](series) for the subject [Engineering Physics](sub)?
+    - How well did I do in series [1](series) for the subject [Engineering Mechanics](sub)?
+    - What is my score in series [2](series) for the subject [Engineering Chemistry](sub)?
+    - Tell me my marks in series [1](series) for the subject [Chemistry](sub).
+    - How did I perform in series [2](series) for the subject [CP](sub)?
+    - Can you provide my marks in series [1](series) for the subject [C programming](sub)?
+    - What were my marks in series [2](series) for the subject [coa](sub)?
+    - Can you give me my marks in series [2](series) for the subject [est 100](sub)?
+    - Please provide my marks for series [1](series) in the subject [Engineering Mechanics](sub).
+    - What were my marks in series [2](series) for the subject [Engineering Mechanics](sub)?
+    - What is my score in series [1](series) for the subject [EST100](sub)?
+    - How did I perform in series [2](series) for the subject [EST100](sub)?
+    - Tell me my marks in series [1](series) for the subject [Engineering Mechanics](sub).
+    - What were my marks in series [2](series) for the subject [Engineering Mechanics](sub)?
+    - How well did I do in series [1](series) for the subject [Engineering Chemistry](sub)?
+    - What is my score in series [2](series) for the subject [Engineering Chemistry](sub)?
+    - Can you provide my marks in series [1](series) for the subject [Chemistry](sub)?
+    - Tell me my marks in series [2](series) for the subject [Chemistry](sub).
+    - What is my performance in series [1](series) for the subject [CP](sub)?
+    - How did I fare in series [2](series) for the subject [CP](sub)?
+    - What were my marks in series [1](series) for the subject [C programming](sub)?
+    - How well did I do in series [2](series) for the subject [C programming](sub)?
+    - What are my marks in series [2](series) for the subject [EST110](sub)?
+    - Can you provide my marks for series [1](series) in the subject [EST110](sub)?
+    - Can you provide my marks for series [1](series) in the subject [EST130](sub)?
+    - Can you provide my marks for series [1](series) in the subject [EST130](sub)?
+    - What were my marks in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [1](series) for the subject [HUN102](sub)?
+    - How well did I do in series [1](series) for the subject [MAT102](sub)?
+    - How well did I do in series [2](series) for the subject [MAT102](sub)?
+    - What is my score in series [2](series) for the subject [EST110](sub)?
+    - Tell me my marks in series [1](series) for the subject [EST130](sub).
+    - How did I perform in series [2](series) for the subject [HUN102](sub)?
+    - What is my score in series [1](series) for the subject [HUN102](sub)?
+    - Can you provide my marks in series [1](series) for the subject [MAT102](sub)?
+    - Tell me my marks in series [2](series) for the subject [EST110](sub).
+    - What is my performance in series [1](series) for the subject [EST130](sub)?
+    - How did I fare in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [1](series) for the subject [MAT102](sub)?
+    - How well did I do in series [2](series) for the subject [EST110](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - Can you provide my marks in series [2](series) for the subject [HUN102](sub)?
+    - Tell me my marks in series [1](series) for the subject [MAT102](sub).
+    - What is my performance in series [2](series) for the subject [EST110](sub)?
+    - How did I fare in series [1](series) for the subject [EST130](sub)?
+    - What were my marks in series [2](series) for the subject [HUN102](sub)?
+    - How well did I do in series [1](series) for the subject [MAT102](sub)?
+    - What is my score in series [2](series) for the subject [EST110](sub)?
+    - Can you provide my marks in series [1](series) for the subject [EST130](sub)?
+    - Tell me my marks in series [2](series) for the subject [HUN102](sub).
+    - What is my performance in series [1](series) for the subject [MAT102](sub)?
+    - How did I fare in series [2](series) for the subject [EST110](sub)?
+    - What were my marks in series [1](series) for the subject [EST130](sub)?
+    - How well did I do in series [2](series) for the subject [HUN102](sub)?
+    - What is my score in series [1](series) for the subject [MAT102](sub)?
+    - Can you provide my marks in series [2](series) for the subject [EST110](sub)?
+    - Tell me my marks in series [1](series) for the subject [EST130](sub).
+    - What is my performance in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [2](series) for the subject [EST110](sub)?
+    - Can you give me my marks in series [2](series) for the subject [HUN102](sub)?
+    - Please provide my marks for series [1](series) in the subject [MAT102](sub).
+    - What were my marks in series [2](series) for the subject [EST110](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - How did I perform in series [2](series) for the subject [HUN102](sub)?
+    - Tell me my marks in series [1](series) for the subject [MAT102](sub).
+    - What were my marks in series [2](series) for the subject [EST110](sub)?
+    - How well did I do in series [1](series) for the subject [EST130](sub)?
+    - What is my score in series [2](series) for the subject [HUN102](sub)?
+    - Can you provide my marks in series [1](series) for the subject [MAT102](sub)?
+    - Tell me my marks in series [2](series) for the subject [EST110](sub).
+    - What is my performance in series [1](series) for the subject [EST130](sub)?
+    - How did I fare in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [1](series) for the subject [MAT102](sub)?
+    - How well did I do in series [2](series) for the subject [EST110](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - Can you provide my marks in series [1](series) for the subject [HUN102](sub)?
+    - Can you provide my marks in series [2](series) for the subject [HUN102](sub)?
+    - Tell me my marks in series [1](series) for the subject [vector calculus](sub)
+    - Tell me my marks in series [2](series) for the subject [vector calculus](sub)
+    - What is my performance in series [1](series) for the subject [vector calculus](sub)
+    - What is my performance in series [2](series) for the subject [vector calculus](sub)
+    - What were my marks in series [1](series) for the subject [vector calculus](sub)
+    - What were my marks in series [2](series) for the subject [vector calculus](sub)
+    - How well did I do in series [1](series) for the subject [vector calculus](sub)
+    - How well did I do in series [2](series) for the subject [vector calculus](sub)
+    - What is my score in series [1](series) for the subject [vector calculus](sub)
+    - What is my score in series [2](series) for the subject [vector calculus](sub)
+    - Can you provide my marks in series [1](series) for the subject [vector calculus](sub)
+    - Can you provide my marks in series [2](series) for the subject [vector calculus](sub)
+    - Tell me my marks in series [2](series) for the subject [data structures](sub)
+    - Tell me my marks in series [1](series) for the subject [data structures](sub)
+    - What is my performance in series [2](series) for the subject [data structures](sub)
+    - What is my performance in series [1](series) for the subject [data structures](sub)
+    - What were my marks in series [2](series) for the subject [data structures](sub)
+    - What were my marks in series [1](series) for the subject [data structures](sub)
+    - How well did I do in series [2](series) for the subject [data structures](sub)
+    - How well did I do in series [1](series) for the subject [data structures](sub)
+    - What is my score in series [2](series) for the subject [ds](sub)
+    - What is my score in series [1](series) for the subject [ds](sub)
+    - Can you provide my marks in series [2](series) for the subject [ds](sub)
+    - Can you provide my marks in series [1](series) for the subject [ds](sub)
+    - What are my marks in series [1](series) for the subject [Logic System Design](sub)?
+    - Please provide my marks for series [2](series) in [CST203](sub).
+    - How did I perform in [LSD](sub) for series [1](series)?
+    - Can you give me my marks in series [2](series) for [LSD](sub)?
+    - What were my marks in series [1](series) for [Logic System Design](sub)?
+    - Tell me my marks in series [2](series) for [CST203](sub).
+    - How well did I do in series [1](series) for [LSD](sub)?
+    - Can you provide my marks in series [2](series) for [CST203](sub)?
+    - What is my score in series [1](series) for [Logic System Design](sub)?
+    - What were my marks in series [2](series) for [CST203](sub)?
+    - How did I perform in [Logic System Design](sub) for series [1](series)?
+    - What is my score in series [2](series) for [Logic System Design](sub)?
+    - Tell me my marks in series [1](series) for [CST203](sub).
+    - What were my marks in [LSD](sub) for series [2](series)?
+    - How well did I do in [CST203](sub) in series [1](series)?
+    - Can you provide my marks in series [2](series) for [Logic System Design](sub)?
+    - What is my score in [CST203](sub) for series [1](series)?
+    - Tell me my marks in series [2](series) for [LSD](sub).
+    - What were my marks in [CST203](sub) for series [1](series)?
+    - How did I fare in series [2](series) for [Logic System Design](sub)?
+    - What is my grade for [LSD](sub) in series [1](series)?
+    - Can you provide my marks in series [2](series) for [CST203](sub)?
+    - How well did I do in [Logic System Design](sub) in series [1](series)?
+    - What is my performance in series [2](series) for [LSD](sub)?
+    - Tell me my marks in series [1](series) for [CST203](sub).
+    - What were my marks in series [2](series) for [Logic System Design](sub)?
+    - How did I score in [CST203](sub) in series [1](series)?
+    - What is my grade for [Logic System Design](sub) in series [2](series)?
+    - What are my marks in [Object Oriented Programming Using Java](sub) for series [1](series)?
+    - What are my marks in [CST205](sub) for series [1](series)?
+    - How did I perform in [Object Oriented Programming Using Java](sub) in series [1](series)?
+    - What were my marks in [Object Oriented Programming Using Java](sub) for series [2](series)?
+    - How well did I do in [CST205](sub) in series [2](series)?
+    - What is my score for [Object Oriented Programming Using Java](sub) in series [2](series)?
+    - Can you provide my marks in [Object Oriented Programming Using Java](sub) for series [1](series)?
+    - Tell me my marks in [CST205](sub) for series [2](series).
+    - What were my marks in [java](sub) for series [1](series)?
+    - How well did I do in [java](sub) in series [2](series)?
+    - What is my performance in [oopj](sub) for series [1](series)?
+    - Can you provide my marks in [oopj](sub) for series [2](series)?
+    - Tell me my marks in [object oriented java](sub) for series [1](series).
+    - What were my marks in [object oriented java](sub) for series [2](series)?
+    - How did I score in [JAVA](sub) in series [1](series)?
+    - What is my grade for [JAVA](sub) in series [2](series)
+    - What are my marks in [Professional Ethics](sub) for series [1](series)
+    - What are my marks in [HUT200](sub) for series [1](series)
+    - How did I perform in [Professional Ethics](sub) in series [1](series)
+    - What were my marks in [Professional Ethics](sub) for series [2](series)
+    - How well did I do in [HUT200](sub) in series [2](series)
+    - What is my score for [Professional Ethics](sub) in series [2](series)
+    - Can you provide my marks in [Professional Ethics](sub) for series [1](series)
+    - Tell me my marks in [HUT200](sub) for series [2](series)
+    - What were my marks in [ethics](sub) for series [1](series)
+    - How well did I do in [ethics](sub) in series [2](series)
+    - What is my performance in [PE](sub) for series [1](series)
+    - Can you provide my marks in [PE](sub) for series [2](series)
+
+
+#only specified series marks will be shown
+
+- intent: sem_attendance%
+  examples: |
+    - what is my attendance% for sem [4](sem)
+    - what is my attendance for sem [2](sem)
+    - what is my attendance percentage for sem [4](sem)
+#just %
+- intent: attendance_detail
+  examples: |
+    - show me the detailed attendance for sem [5](sem)
+    - what is my detailed attendance for sem [3](sem)
+    - generate detailed attendance for sem [2](sem)
+    - show me my detailed attendance for sem [1](sem)
+    - display my detailed attendance for sem [6](sem)
+    - detailed attendance for sem [7](sem)
+    - display detailed attendance for sem [3](sem)
+    - generate my detailed attendance for sem [2](sem)
+    - show me the attendance details for [1st](sem)
+    - what is my attendance record for [second](sem)
+    - generate a report of my attendance for [3rd](sem)
+    - display my attendance details for [4](sem)
+    - show me the detailed attendance report for [fifth](sem)
+    - detailed attendance for [6th](sem)
+    - provide me with the attendance details for [7th](sem)
+    - generate a comprehensive attendance report for [eighth](sem)
+    - show me the attendance statistics for [fourth](sem)
+    - what is my attendance percentage for [5th](sem)
+    - display my detailed attendance for [second](sem)
+    - show me my detailed attendance for [third](sem)
+    - generate detailed attendance for [6](sem)
+    - display detailed attendance for [seventh](sem)
+    - generate my detailed attendance for [8th](sem)
+    - show me the attendance details for [first](sem)
+    - what is my attendance record for [2nd](sem)
+    - generate a report of my attendance for [third](sem)
+    - display my attendance details for [4th](sem)
+    - show me the detailed attendance report for [5th](sem)
+    - detailed attendance for [sixth](sem)
+    - provide me with the attendance details for [seventh](sem)
+    - generate a comprehensive attendance report for [8th](sem)
+    - show me the attendance statistics for [1](sem)
+    - what is my attendance percentage for [2nd](sem)
+    - show me the attendance details for [4](sem)
+    - what is my attendance record for [fifth](sem)
+    - generate a report of my attendance for [sixth](sem)
+    - display my attendance details for [1st](sem)
+    - show me the detailed attendance report for [eighth](sem)
+    - detailed attendance for [7](sem)
+    - provide me with the attendance details for [3](sem)
+    - generate a comprehensive attendance report for [2nd](sem)
+    - show me the attendance statistics for [fourth](sem)
+    - what is my attendance percentage for [6th](sem)
+    - show me the attendance details for [4](sem)
+    - what is my attendance record for [fifth](sem)
+    - generate a report of my attendance for [sixth](sem)
+    - display my attendance details for [1st](sem)
+    - show me the detailed attendance report for [eighth](sem)
+    - detailed attendance for [7](sem)
+    - provide me with the attendance details for [3](sem)
+    - generate a comprehensive attendance report for [2nd](sem)
+    - show me the attendance statistics for [fourth](sem)
+    - what is my attendance percentage for [6th](sem)
+    - show me the detailed attendance for sem [5](sem)
+    - what is my detailed attendance for sem [3](sem)
+    - generate detailed attendance for sem [2](sem)
+    - show me my detailed attendance for sem [1](sem)
+    - display my detailed attendance for sem [6](sem)
+    - detailed attendance for sem [7](sem)
+    - display detailed attendance for sem [3](sem)
+    - generate my detailed attendance for sem [2](sem)
+    - show me the detailed attendance for [5th](sem)
+    - show me the detailed attendance for [fifth](sem)
+    - show me the detailed attendance for [5th](sem)
+    - show me the detailed attendance for [1st](sem)
+    - show me the detailed attendance for [first](sem)
+    - show me the detailed attendance for [1](sem)
+    - show me the detailed attendance for [2nd](sem)
+    - show me the detailed attendance for [second](sem)
+    - show me the detailed attendance for [2](sem)
+    - show me the detailed attendance for [3rd](sem)
+    - show me the detailed attendance for [third](sem)
+    - show me the detailed attendance for [3](sem)
+    - show me the detailed attendance for [4th](sem)
+    - show me the detailed attendance for [fourth](sem)
+    - show me the detailed attendance for [4](sem)
+    - show me the detailed attendance for [6th](sem)
+    - show me the detailed attendance for [sixth](sem)
+    - show me the detailed attendance for [6](sem)
+    - show me the detailed attendance for [7th](sem)
+    - show me the detailed attendance for [seventh](sem)
+    - show me the detailed attendance for [7](sem)
+    - show me the detailed attendance for [8th](sem)
+    - show me the detailed attendance for [eighth](sem)
+    - show me the detailed attendance for [8](sem)
+
+#detailed attendance

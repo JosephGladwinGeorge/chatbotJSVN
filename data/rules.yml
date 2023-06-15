@@ -37,6 +37,25 @@ rules:
   - intent: sub_mark_series
   - action: action_sub_mark_series
 
+- rule: attendance_not_detailed
+  steps:
+  - intent: sem_attendance%
+  - action: action_sem_attendance%
+
+- rule: attendance_detailed
+  steps:
+  - intent: attendance_detail
+  - action: action_sem_attendance_detailed
+
+- rule: sgpa
+  steps:
+  - intent: sgpa_sem
+  - action: action_sgpa_sem
+
+- rule: grade
+  steps:
+  - intent: sem_grade_subject
+  - action: action_sem_grade
 
 - rule: no_entity
   condition:

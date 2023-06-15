@@ -139,7 +139,7 @@ class ActionCgpaYear(Action):
             print(results)
 
             mark=float((results[0])[0])
-            ans = f"your cgpa is {mark}"
+            ans = f"your year {year} cgpa is {mark}"
             dispatcher.utter_message(ans)
             cursor.close()
 
@@ -174,6 +174,33 @@ class ActionSemTotal(Action):
 
             msg = f"Here is your Semester_{sem} Series_{series} results:\n {table}"
             dispatcher.utter_message(msg)
+            cursor.close()
+
+        except Error as e:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+class ActionSgpaSem(Action):
+    def name(self) -> Text:
+        return "action_sgpa_sem"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        student_id = tracker.sender_id
+        sem = tracker.get_slot('sem')
+        try:
+            query = f"SELECT sem_{sem}_sgpa FROM main_table WHERE user_id = '{student_id}'"
+            cursor = connection.cursor()
+            cursor.execute(query)
+
+            results = cursor.fetchall()
+            
+            print(results)
+
+            mark=float((results[0])[0])
+            ans = f"your semester {sem} sgpa is {mark}"
+            dispatcher.utter_message(ans)
             cursor.close()
 
         except Error as e:
@@ -231,6 +258,92 @@ class ActionSubMarkSeries(Action):
             print(sem[0][0])
 
             query = f"SELECT series_{series} FROM {sem[0][0]} where subject='{sub}' AND user_id='{user_id}'"
+            cursor.execute(query)
+
+            mark = cursor.fetchall()
+                    
+            msg = f"{mark[0][0]}"
+            dispatcher.utter_message(msg)
+            cursor.close()
+        except:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+class ActionSemAttendance(Action):
+    def name(self) -> Text:
+        return "action_sem_attendance%"
+    
+    def run(self,dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        sem = tracker.get_slot('sem')
+        user_id = tracker.sender_id
+        try:
+            cursor = connection.cursor()
+
+            query = f"SELECT subject,attendance_percentage FROM semester_{sem} where user_id='{user_id}'"
+            cursor.execute(query)
+
+            mark = cursor.fetchall()
+                    
+            table =  "| Subject | Attendance |\n"
+            table += "|---------|------------|\n"
+
+            for row in mark:
+                table += "|    {}    |    {}    |\n".format(row[0], row[1])
+                    
+            print(table)
+            msg = f"Here is your semester {sem} attendance:\n {table}"
+            dispatcher.utter_message(msg)
+            cursor.close()
+        except:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+class ActionSemAttendanceDetailed(Action):
+    def name(self) -> Text:
+        return "action_sem_attendance_detailed"
+    
+    def run(self,dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        sem = tracker.get_slot('sem')
+        user_id = tracker.sender_id
+        try:
+            cursor = connection.cursor()
+
+            query = f"SELECT subject,total_periods,present,attendance_percentage FROM semester_{sem} where user_id='{user_id}'"
+            cursor.execute(query)
+
+            mark = cursor.fetchall()
+                    
+            table =  "| Subject | Total Periods | Present | Attendance |\n"
+            table += "|---------|---------------|---------|------------|\n"
+
+            for row in mark:
+                table += "|    {}    |     {}     |   {}   |    {}    |\n".format(row[0], row[1],row[2],row[3])
+                    
+            print(table)
+            msg = f"Here is your semester {sem} detailed attendance:\n {table}"
+            dispatcher.utter_message(msg)
+            cursor.close()
+        except:
+            print(f"Error parsing database: {e}")
+            dispatcher.utter_message("Error parsing database")
+
+class ActionSemGrade(Action):
+    def name(self) -> Text:
+        return "action_sem_grade"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
+        sub = tracker.get_slot('sub')
+        user_id = tracker.sender_id
+        series = tracker.get_slot('series')
+        try:
+            q = f"SELECT subject_sem from semester_subject where subject_code='{sub}'"
+            cursor = connection.cursor()
+            cursor.execute(q)
+
+            sem = cursor.fetchall()
+            print(sem[0][0])
+
+            query = f"SELECT grade FROM {sem[0][0]} where subject='{sub}' AND user_id='{user_id}'"
             cursor.execute(query)
 
             mark = cursor.fetchall()

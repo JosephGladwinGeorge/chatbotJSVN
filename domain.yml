@@ -13,6 +13,10 @@ intents:
   - sem_total
   - sub_mark
   - sub_mark_series
+  - sem_attendance%
+  - attendance_detail
+  - sem_grade_subject
+  - sgpa_sem
 
 responses:
   utter_greet:
@@ -65,9 +69,13 @@ slots:
 actions:
   - action_cgpa
   - action_cgpa_year
+  - action_sgpa_sem
   - action_sem_total
   - action_sub_mark
   - action_sub_mark_series
+  - action_sem_grade
+  - action_sem_attendance_detailed
+  - action_sem_attendance%
   - fallback_action
 
 

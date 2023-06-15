@@ -1,0 +1,734 @@
+- intent: sub_mark_series
+  examples: |
+    - what is my [EM](sub) marks in series [1](series)
+    - what is my [EM](sub) marks in series [2](series)
+    - Can you provide my marks in [EM](sub) for series [2](series)?
+    - Can you provide my marks in [EM](sub) for series [1](series)?
+    - What are my marks for [EM](sub) in series [1](series)?
+    - What are my marks for [EM](sub) in series [2](series)?
+    - How did I perform in [Engineering Mechanics](sub) in series [1](series)
+    - How did I perform in [Engineering Mechanics](sub) in series [2](series)
+    - How did I perform in [Engineering Mechanics](sub) in series [2](series)
+    - Please provide me with my marks for [est 100](sub) in series [2](series)
+    - Please provide me with my marks for [est 100](sub) in series [1](series)
+    - Can you inform me about my marks in [est 100](sub) for series [1](series)?
+    - Can you inform me about my marks in [est 100](sub) for series [2](series)?
+    - What are my marks in [est 100](sub) for series [1](series)?
+    - What are my marks in [est 100](sub) for series [2](series)?
+    - What were my marks in [est 100](sub) for series [1](series)?
+    - What were my marks in [est 100](sub) for series [2](series)?
+    - How well did I do in [est 100](sub) in series [1](series)?
+    - How well did I do in [est 100](sub) in series [2](series)?
+    - What were my marks in [est100](sub) for series [2](series)?
+    - Tell me my marks in [est100](sub) for series [2](series)
+    - What was my performance in [est100](sub) for series [1](series)?
+    - What was my performance in [est100](sub) for series [2](series)?
+    - What was my performance in [est 100](sub) for series [1](series)?
+    - Could you please tell me my marks in [Engineering Mechanics](sub) for series [2](series)
+    - Could you please tell me my marks in [Engineering Mechanics](sub) for series [1](series)
+    - What were my marks in [Basics of Civil and Mechanical Engineering](sub) for series [2](series)
+    - What were my marks in [Basics of Civil and Mechanical Engineering](sub) for series [1](series)
+    - How well did I do in [Basics of Civil and Mechanical Engineering](sub) in series [1](series)
+    - How well did I do in [Basics of Civil and Mechanical Engineering](sub) in series [2](series)
+    - What were my marks in [BME BCE](sub) for series [2](series)
+    - Tell me my marks in [BME BCE](sub) for series [2](series)
+    - What was my performance in [LS](sub) for series [1](series)?
+    - What was my performance in [LS](sub) for series [2](series)?
+    - What was my performance in [linear Algebra](sub) for series [1](series)?
+    - What was my performance in [linear Algebra](sub) for series [2](series)?
+    - What was my performance in [Physics](sub) for series [1](series)?
+    - What was my performance in [Physics](sub) for series [2](series)?
+    - What was my performance in [BME](sub) for series [1](series)?
+    - What was my performance in [BME](sub) for series [2](series)?
+    - What was my performance in [BCE](sub) for series [1](series)?
+    - What was my performance in [BCE](sub) for series [2](series)?
+    - What was my performance in [Engineering Physics](sub) for series [1](series)?
+    - What was my performance in [Engineering Physics](sub) for series [2](series)?
+    - Tell me my marks in [BME BCE](sub) for series [1](series)
+    - what is my [Engineering Mechanics](sub) marks in series [1](series)
+    - what is my [Engineering Mechanics](sub) marks in series [2](series)
+    - what is my [EST100](sub) marks in series [1](series)
+    - what is my [EST100](sub) marks in series [2](series)
+    - what is my [est 100](sub) marks in series [1](series)
+    - what is my [est 100](sub) marks in series [2](series)
+    - what is my [Basics of Civil and Mechanical Engineering](sub) marks in series [1](series)
+    - what is my [Basics of Civil and Mechanical Engineering](sub) marks in series [2](series)
+    - what is my [BME BCE](sub) marks in series [2](series)
+    - what is my [BME BCE](sub) marks in series [1](series)
+    - what is my [LS](sub) marks in series [1](series)
+    - what is my [LS](sub) marks in series [2](series)
+    - what is my [linear Algebra](sub) marks in series [2](series)
+    - what is my [linear Algebra](sub) marks in series [1](series)
+    - what is my [Physics](sub) marks in series [1](series)
+    - what is my [Physics](sub) marks in series [2](series)
+    - what is my [BME](sub) marks in series [1](series)
+    - what is my [BME](sub) marks in series [2](series)
+    - what is my [BCE](sub) marks in series [1](series)
+    - what is my [BCE](sub) marks in series [2](series)
+    - what is my [Engineering Physics](sub) marks in series [1](series)
+    - what is my [Engineering Physics](sub) marks in series [2](series)
+    - what is my [Engineering Mechanics](sub) marks in series [1](series)
+    - what is my [Engineering Mechanics](sub) marks in series [2](series)
+    - what is my [Engineering Chemistry](sub) marks in series [1](series)
+    - what is my [Engineering Chemistry](sub) marks in series [2](series)
+    - Tell me my marks in [Engineering Chemistry](sub) for series [1](series)
+    - Tell me my marks in [Engineering Chemistry](sub) for series [2](series)
+    - [Engineering Chemistry](sub) mark series [1](series)
+    - [Engineering Chemistry](sub) mark series [2](series)
+    - [Engineering Chemistry](sub) marks series [1](series)
+    - [Engineering Chemistry](sub) marks series [2](series)
+    - [Engineering physics](sub) mark series [1](series)
+    - [Engineering physics](sub) mark series [2](series)
+    - [Engineering physics](sub) marks series [1](series)
+    - [Engineering physics](sub) marks series [2](series)
+    - [C Programming](sub) mark series [1](series)
+    - [C Programming](sub) mark series [2](series)
+    - What were my marks in [C Programming](sub) for series [1](series)?
+    - What were my marks in [C Programming](sub) for series [2](series)?
+    - What was my performance in [C Programming](sub) for series [1](series)?
+    - What was my performance in [C Programming](sub) for series [2](series)?
+    - Tell me my marks in [CP](sub) for series [2](series)
+    - Tell me my marks in [CP](sub) for series [1](series)
+    - what is my [Chemistry](sub) marks in series [1](series)
+    - what is my [Chemistry](sub) marks in series [2](series)
+    - what is my [CP](sub) marks in series [1](series)
+    - what is my [CP](sub) marks in series [2](series)
+    - what is my [C programming](sub) marks in series [1](series)
+    - what is my [C programming](sub) marks in series [2](series)
+    - what is my [coa](sub) marks in series [2](series)
+    - what is my [coa](sub) marks in series [1](series)
+    - What are my marks in series [2](series) for the subject [BME](sub)?
+    - Can you provide my marks for series [1](series) in the subject [BCE](sub)?
+    - What were my marks in series [2](series) for the subject [Engineering Physics](sub)?
+    - How well did I do in series [1](series) for the subject [Engineering Mechanics](sub)?
+    - What is my score in series [2](series) for the subject [Engineering Chemistry](sub)?
+    - Tell me my marks in series [1](series) for the subject [Chemistry](sub).
+    - How did I perform in series [2](series) for the subject [CP](sub)?
+    - Can you provide my marks in series [1](series) for the subject [C programming](sub)?
+    - What were my marks in series [2](series) for the subject [coa](sub)?
+    - Can you give me my marks in series [2](series) for the subject [est 100](sub)?
+    - Please provide my marks for series [1](series) in the subject [Engineering Mechanics](sub).
+    - What were my marks in series [2](series) for the subject [Engineering Mechanics](sub)?
+    - What is my score in series [1](series) for the subject [EST100](sub)?
+    - How did I perform in series [2](series) for the subject [EST100](sub)?
+    - Tell me my marks in series [1](series) for the subject [Engineering Mechanics](sub).
+    - What were my marks in series [2](series) for the subject [Engineering Mechanics](sub)?
+    - How well did I do in series [1](series) for the subject [Engineering Chemistry](sub)?
+    - What is my score in series [2](series) for the subject [Engineering Chemistry](sub)?
+    - Can you provide my marks in series [1](series) for the subject [Chemistry](sub)?
+    - Tell me my marks in series [2](series) for the subject [Chemistry](sub).
+    - What is my performance in series [1](series) for the subject [CP](sub)?
+    - How did I fare in series [2](series) for the subject [CP](sub)?
+    - What were my marks in series [1](series) for the subject [C programming](sub)?
+    - How well did I do in series [2](series) for the subject [C programming](sub)?
+    - What are my marks in series [2](series) for the subject [EST110](sub)?
+    - Can you provide my marks for series [1](series) in the subject [EST110](sub)?
+    - Can you provide my marks for series [1](series) in the subject [EST130](sub)?
+    - Can you provide my marks for series [1](series) in the subject [EST130](sub)?
+    - What were my marks in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [1](series) for the subject [HUN102](sub)?
+    - How well did I do in series [1](series) for the subject [MAT102](sub)?
+    - How well did I do in series [2](series) for the subject [MAT102](sub)?
+    - What is my score in series [2](series) for the subject [EST110](sub)?
+    - Tell me my marks in series [1](series) for the subject [EST130](sub).
+    - How did I perform in series [2](series) for the subject [HUN102](sub)?
+    - What is my score in series [1](series) for the subject [HUN102](sub)?
+    - Can you provide my marks in series [1](series) for the subject [MAT102](sub)?
+    - Tell me my marks in series [2](series) for the subject [EST110](sub).
+    - What is my performance in series [1](series) for the subject [EST130](sub)?
+    - How did I fare in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [1](series) for the subject [MAT102](sub)?
+    - How well did I do in series [2](series) for the subject [EST110](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - Can you provide my marks in series [2](series) for the subject [HUN102](sub)?
+    - Tell me my marks in series [1](series) for the subject [MAT102](sub).
+    - What is my performance in series [2](series) for the subject [EST110](sub)?
+    - How did I fare in series [1](series) for the subject [EST130](sub)?
+    - What were my marks in series [2](series) for the subject [HUN102](sub)?
+    - How well did I do in series [1](series) for the subject [MAT102](sub)?
+    - What is my score in series [2](series) for the subject [EST110](sub)?
+    - Can you provide my marks in series [1](series) for the subject [EST130](sub)?
+    - Tell me my marks in series [2](series) for the subject [HUN102](sub).
+    - What is my performance in series [1](series) for the subject [MAT102](sub)?
+    - How did I fare in series [2](series) for the subject [EST110](sub)?
+    - What were my marks in series [1](series) for the subject [EST130](sub)?
+    - How well did I do in series [2](series) for the subject [HUN102](sub)?
+    - What is my score in series [1](series) for the subject [MAT102](sub)?
+    - Can you provide my marks in series [2](series) for the subject [EST110](sub)?
+    - Tell me my marks in series [1](series) for the subject [EST130](sub).
+    - What is my performance in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [2](series) for the subject [EST110](sub)?
+    - Can you give me my marks in series [2](series) for the subject [HUN102](sub)?
+    - Please provide my marks for series [1](series) in the subject [MAT102](sub).
+    - What were my marks in series [2](series) for the subject [EST110](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - How did I perform in series [2](series) for the subject [HUN102](sub)?
+    - Tell me my marks in series [1](series) for the subject [MAT102](sub).
+    - What were my marks in series [2](series) for the subject [EST110](sub)?
+    - How well did I do in series [1](series) for the subject [EST130](sub)?
+    - What is my score in series [2](series) for the subject [HUN102](sub)?
+    - Can you provide my marks in series [1](series) for the subject [MAT102](sub)?
+    - Tell me my marks in series [2](series) for the subject [EST110](sub).
+    - What is my performance in series [1](series) for the subject [EST130](sub)?
+    - How did I fare in series [2](series) for the subject [HUN102](sub)?
+    - What were my marks in series [1](series) for the subject [MAT102](sub)?
+    - How well did I do in series [2](series) for the subject [EST110](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - What is my score in series [1](series) for the subject [EST130](sub)?
+    - Can you provide my marks in series [1](series) for the subject [HUN102](sub)?
+    - Can you provide my marks in series [2](series) for the subject [HUN102](sub)?
+    - Tell me my marks in series [1](series) for the subject [vector calculus](sub)
+    - Tell me my marks in series [2](series) for the subject [vector calculus](sub)
+    - What is my performance in series [1](series) for the subject [vector calculus](sub)
+    - What is my performance in series [2](series) for the subject [vector calculus](sub)
+    - What were my marks in series [1](series) for the subject [vector calculus](sub)
+    - What were my marks in series [2](series) for the subject [vector calculus](sub)
+    - How well did I do in series [1](series) for the subject [vector calculus](sub)
+    - How well did I do in series [2](series) for the subject [vector calculus](sub)
+    - What is my score in series [1](series) for the subject [vector calculus](sub)
+    - What is my score in series [2](series) for the subject [vector calculus](sub)
+    - Can you provide my marks in series [1](series) for the subject [vector calculus](sub)
+    - Can you provide my marks in series [2](series) for the subject [vector calculus](sub)
+    - Tell me my marks in series [2](series) for the subject [data structures](sub)
+    - Tell me my marks in series [1](series) for the subject [data structures](sub)
+    - What is my performance in series [2](series) for the subject [data structures](sub)
+    - What is my performance in series [1](series) for the subject [data structures](sub)
+    - What were my marks in series [2](series) for the subject [data structures](sub)
+    - What were my marks in series [1](series) for the subject [data structures](sub)
+    - How well did I do in series [2](series) for the subject [data structures](sub)
+    - How well did I do in series [1](series) for the subject [data structures](sub)
+    - What is my score in series [2](series) for the subject [ds](sub)
+    - What is my score in series [1](series) for the subject [ds](sub)
+    - Can you provide my marks in series [2](series) for the subject [ds](sub)
+    - Can you provide my marks in series [1](series) for the subject [ds](sub)
+    - What are my marks in series [1](series) for the subject [Logic System Design](sub)?
+    - Please provide my marks for series [2](series) in [CST203](sub).
+    - How did I perform in [LSD](sub) for series [1](series)?
+    - Can you give me my marks in series [2](series) for [LSD](sub)?
+    - What were my marks in series [1](series) for [Logic System Design](sub)?
+    - Tell me my marks in series [2](series) for [CST203](sub).
+    - How well did I do in series [1](series) for [LSD](sub)?
+    - Can you provide my marks in series [2](series) for [CST203](sub)?
+    - What is my score in series [1](series) for [Logic System Design](sub)?
+    - What were my marks in series [2](series) for [CST203](sub)?
+    - How did I perform in [Logic System Design](sub) for series [1](series)?
+    - What is my score in series [2](series) for [Logic System Design](sub)?
+    - Tell me my marks in series [1](series) for [CST203](sub).
+    - What were my marks in [LSD](sub) for series [2](series)?
+    - How well did I do in [CST203](sub) in series [1](series)?
+    - Can you provide my marks in series [2](series) for [Logic System Design](sub)?
+    - What is my score in [CST203](sub) for series [1](series)?
+    - Tell me my marks in series [2](series) for [LSD](sub).
+    - What were my marks in [CST203](sub) for series [1](series)?
+    - How did I fare in series [2](series) for [Logic System Design](sub)?
+    - What is my grade for [LSD](sub) in series [1](series)?
+    - Can you provide my marks in series [2](series) for [CST203](sub)?
+    - How well did I do in [Logic System Design](sub) in series [1](series)?
+    - What is my performance in series [2](series) for [LSD](sub)?
+    - Tell me my marks in series [1](series) for [CST203](sub).
+    - What were my marks in series [2](series) for [Logic System Design](sub)?
+    - How did I score in [CST203](sub) in series [1](series)?
+    - What is my grade for [Logic System Design](sub) in series [2](series)?
+    - What are my marks in [Object Oriented Programming Using Java](sub) for series [1](series)?
+    - What are my marks in [CST205](sub) for series [1](series)?
+    - How did I perform in [Object Oriented Programming Using Java](sub) in series [1](series)?
+    - What were my marks in [Object Oriented Programming Using Java](sub) for series [2](series)?
+    - How well did I do in [CST205](sub) in series [2](series)?
+    - What is my score for [Object Oriented Programming Using Java](sub) in series [2](series)?
+    - Can you provide my marks in [Object Oriented Programming Using Java](sub) for series [1](series)?
+    - Tell me my marks in [CST205](sub) for series [2](series).
+    - What were my marks in [java](sub) for series [1](series)?
+    - How well did I do in [java](sub) in series [2](series)?
+    - What is my performance in [oopj](sub) for series [1](series)?
+    - Can you provide my marks in [oopj](sub) for series [2](series)?
+    - Tell me my marks in [object oriented java](sub) for series [1](series).
+    - What were my marks in [object oriented java](sub) for series [2](series)?
+    - How did I score in [JAVA](sub) in series [1](series)?
+    - What is my grade for [JAVA](sub) in series [2](series)
+    - What are my marks in [Professional Ethics](sub) for series [1](series)
+    - What are my marks in [HUT200](sub) for series [1](series)
+    - How did I perform in [Professional Ethics](sub) in series [1](series)
+    - What were my marks in [Professional Ethics](sub) for series [2](series)
+    - How well did I do in [HUT200](sub) in series [2](series)
+    - What is my score for [Professional Ethics](sub) in series [2](series)
+    - Can you provide my marks in [Professional Ethics](sub) for series [1](series)
+    - Tell me my marks in [HUT200](sub) for series [2](series)
+    - What were my marks in [ethics](sub) for series [1](series)
+    - How well did I do in [ethics](sub) in series [2](series)
+    - What is my performance in [PE](sub) for series [1](series)
+    - Can you provide my marks in [PE](sub) for series [2](series)
+
+
+#only specified series marks will be shown
+
+- intent: sem_attendance%
+  examples: |
+    - what is my attendance% for sem [1](sem)
+    - what is my attendance for sem [2](sem)
+    - what is my attendance percentage for sem [3](sem)
+    - what is my attendance% for sem [4](sem)
+    - what is my attendance for sem [5](sem)
+    - what is my attendance percentage for sem [6](sem)
+    - what is my attendance% for sem [7](sem)
+    - what is my attendance for sem [8](sem)
+    - my attendance% for sem [1](sem)
+    - my attendance for sem [2](sem)
+    - my attendance percentage for sem [3](sem)
+    - my attendance% for sem [4](sem)
+    - my attendance for sem [5](sem)
+    - my attendance percentage for sem [6](sem)
+    - my attendance% for sem [7](sem)
+    - my attendance for sem [8](sem)
+    - How much is my attendance% for sem [1](sem)
+    - How much is my attendance for sem [2](sem)
+    - How much is my attendance percentage for sem [3](sem)
+    - How much is my attendance% for sem [4](sem)
+    - How much is my attendance for sem [5](sem)
+    - How much is my attendance percentage for sem [6](sem)
+    - How much is my attendance% for sem [7](sem)
+    - How much is my attendance for sem [8](sem)
+    - tell me my attendance% for sem [1](sem)
+    - tell me my attendance for sem [2](sem)
+    - tell me my attendance percentage for sem [3](sem)
+    - tell me my attendance% for sem [4](sem)
+    - tell me my attendance for sem [5](sem)
+    - tell me my attendance percentage for sem [6](sem)
+    - tell me my attendance% for sem [7](sem)
+    - tell me my attendance for sem [8](sem)
+    - attendance% for sem [1](sem)
+    - attendance for sem [2](sem)
+    - attendance percentage for sem [3](sem)
+    - attendance% for sem [4](sem)
+    - attendance for sem [5](sem)
+    - attendance percentage for sem [6](sem)
+    - attendance% for sem [7](sem)
+    - attendance for sem [8](sem)
+    - check my attendance% for sem [1](sem)
+    - check my attendance for sem [2](sem)
+    - check my attendance percentage for sem [3](sem)
+    - check my attendance% for sem [4](sem)
+    - check my attendance for sem [5](sem)
+    - check my attendance percentage for sem [6](sem)
+    - check my attendance% for sem [7](sem)
+    - check my attendance for sem [8](sem)
+    - give me my attendance for sem [1](sem)
+    - give me my attendance percentage for sem [2](sem)
+    - give me my attendance% for sem [3](sem)
+    - give me my attendance for sem [4](sem)
+    - give me my attendance percentage for sem [5](sem)
+    - give me my attendance% for sem [6](sem)
+    - give me my attendance for sem [7](sem)
+    - give me my attendance percentage for sem [8](sem)
+    - what's my attendance percentage for sem [1](sem)
+    - what's my attendance% for sem [2](sem)
+    - what's my attendance percentage for sem [3](sem)
+    - what's my attendance% for sem [4](sem)
+    - what's my attendance percentage for sem [5](sem)
+    - what's my attendance% for sem [6](sem)
+    - what's my attendance percentage for sem [7](sem)
+    - what's my attendance% for sem [8](sem)
+    - show my attendance% for sem [1](sem)
+    - show my attendance for sem [2](sem)
+    - show my attendance percentage for sem [3](sem)
+    - show my attendance% for sem [4](sem)
+    - show my attendance for sem [5](sem)
+    - show my attendance percentage for sem [6](sem)
+    - show my attendance% for sem [7](sem)
+    - show my attendance for sem [8](sem)
+    - display my attendance% for sem [1](sem)
+    - display my attendance for sem [2](sem)
+    - display my attendance percentage for sem [3](sem)
+    - display my attendance% for sem [4](sem)
+    - display my attendance for sem [5](sem)
+    - display my attendance percentage for sem [6](sem)
+    - display my attendance% for sem [7](sem)
+    - display my attendance for sem [8](sem)
+    - get my attendance percentage for sem [1](sem)
+    - get my attendance% for sem [2](sem)
+    - get my attendance percentage for sem [3](sem)
+    - get my attendance% for sem [4](sem)
+    - get my attendance percentage for sem [5](sem)
+    - get my attendance% for sem [6](sem)
+    - get my attendance percentage for sem [7](sem)
+    - get my attendance% for sem [8](sem)
+    - retrieve my attendance% for sem [1](sem)
+    - retrieve my attendance for sem [2](sem)
+    - retrieve my attendance percentage for sem [3](sem)
+    - retrieve my attendance% for sem [4](sem)
+    - retrieve my attendance for sem [5](sem)
+    - retrieve my attendance percentage for sem [6](sem)
+    - retrieve my attendance% for sem [7](sem)
+    - retrieve my attendance for sem [8](sem)
+    - fetch my attendance percentage for sem [1](sem)
+    - fetch my attendance% for sem [2](sem)
+    - fetch my attendance percentage for sem [3](sem)
+    - fetch my attendance% for sem [4](sem)
+    - fetch my attendance percentage for sem [5](sem)
+    - fetch my attendance% for sem [6](sem)
+    - fetch my attendance percentage for sem [7](sem)
+    - fetch my attendance% for sem [8](sem)
+    - obtain my attendance% for sem [1](sem)
+    - obtain my attendance for sem [2](sem)
+    - obtain my attendance percentage for sem [3](sem)
+    - obtain my attendance% for sem [4](sem)
+    - obtain my attendance for sem [5](sem)
+    - obtain my attendance percentage for sem [6](sem)
+    - obtain my attendance% for sem [7](sem)
+    - obtain my attendance for sem [8](sem)
+    - calculate my attendance percentage for sem [1](sem)
+    - calculate my attendance% for sem [2](sem)
+    - calculate my attendance percentage for sem [3](sem)
+    - calculate my attendance% for sem [4](sem)
+    - calculate my attendance percentage for sem [5](sem)
+    - calculate my attendance% for sem [6](sem)
+    - calculate my attendance percentage for sem [7](sem)
+    - calculate my attendance% for sem [8](sem)
+    - find my attendance for sem [1](sem)
+    - find my attendance percentage for sem [2](sem)
+    - find my attendance% for sem [3](sem)
+    - find my attendance for sem [4](sem)
+    - find my attendance percentage for sem [5](sem)
+    - find my attendance% for sem [6](sem)
+    - find my attendance percentage for sem [7](sem)
+    - find my attendance% for sem [8](sem)
+    - determine my attendance percentage for sem [1](sem)
+    - determine my attendance% for sem [2](sem)
+    - determine my attendance percentage for sem [3](sem)
+    - determine my attendance% for sem [4](sem)
+    - determine my attendance percentage for sem [5](sem)
+    - determine my attendance% for sem [6](sem)
+    - determine my attendance percentage for sem [7](sem)
+    - determine my attendance% for sem [8](sem)
+    - provide my attendance% for sem [1](sem)
+    - provide my attendance for sem [2](sem)
+    - provide my attendance percentage for sem [3](sem)
+    - provide my attendance% for sem [4](sem)
+    - provide my attendance for sem [5](sem)
+    - provide my attendance percentage for sem [6](sem)
+    - provide my attendance% for sem [7](sem)
+    - provide my attendance for sem [8](sem)
+    - supply my attendance percentage for sem [1](sem)
+    - supply my attendance% for sem [2](sem)
+    - supply my attendance percentage for sem [3](sem)
+    - supply my attendance% for sem [4](sem)
+    - supply my attendance percentage for sem [5](sem)
+    - supply my attendance% for sem [6](sem)
+    - supply my attendance percentage for sem [7](sem)
+    - supply my attendance% for sem [8](sem)
+    - give my attendance for sem [1](sem)
+    - give my attendance percentage for sem [2](sem)
+    - give my attendance% for sem [3](sem)
+    - give my attendance for sem [4](sem)
+    - give my attendance percentage for sem [5](sem)
+    - give my attendance% for sem [6](sem)
+    - give my attendance percentage for sem [7](sem)
+    - give my attendance% for sem [8](sem)
+    - share my attendance% for sem [1](sem)
+    - share my attendance for sem [2](sem)
+    - share my attendance percentage for sem [3](sem)
+    - share my attendance% for sem [4](sem)
+    - share my attendance for sem [5](sem)
+    - share my attendance percentage for sem [6](sem)
+    - share my attendance% for sem [7](sem)
+    - share my attendance for sem [8](sem)
+    - present my attendance percentage for sem [1](sem)
+    - present my attendance% for sem [2](sem)
+    - present my attendance percentage for sem [3](sem)
+    - present my attendance% for sem [4](sem)
+    - present my attendance percentage for sem [5](sem)
+    - present my attendance% for sem [6](sem)
+    - present my attendance percentage for sem [7](sem)
+    - present my attendance% for sem [8](sem)
+        - what is my attendance% for sem [1st](sem)
+    - what is my attendance for sem [2nd](sem)
+    - what is my attendance percentage for sem [3rd](sem)
+    - what is my attendance% for sem [4th](sem)
+    - what is my attendance for sem [5th](sem)
+    - what is my attendance percentage for sem [6th](sem)
+    - what is my attendance% for sem [7th](sem)
+    - what is my attendance for sem [8th](sem)
+    - my attendance% for sem [1st](sem)
+    - my attendance for sem [2nd](sem)
+    - my attendance percentage for sem [3rd](sem)
+    - my attendance% for sem [4th](sem)
+    - my attendance for sem [5th](sem)
+    - my attendance percentage for sem [6th](sem)
+    - my attendance% for sem [7th](sem)
+    - my attendance for sem [8th](sem)
+    - How much is my attendance% for sem [1st](sem)
+    - How much is my attendance for sem [2nd](sem)
+    - How much is my attendance percentage for sem [3rd](sem)
+    - How much is my attendance% for sem [4th](sem)
+    - How much is my attendance for sem [5th](sem)
+    - How much is my attendance percentage for sem [6th](sem)
+    - How much is my attendance% for sem [7th](sem)
+    - How much is my attendance for sem [8th](sem)
+    - tell me my attendance% for sem [1st](sem)
+    - tell me my attendance for sem [2nd](sem)
+    - tell me my attendance percentage for sem [3rd](sem)
+    - tell me my attendance% for sem [4th](sem)
+    - tell me my attendance for sem [5th](sem)
+    - tell me my attendance percentage for sem [6th](sem)
+    - tell me my attendance% for sem [7th](sem)
+    - tell me my attendance for sem [8th](sem)
+    - attendance% for sem [1st](sem)
+    - attendance for sem [2nd](sem)
+    - attendance percentage for sem [3rd](sem)
+    - attendance% for sem [4th](sem)
+    - attendance for sem [5th](sem)
+    - attendance percentage for sem [6th](sem)
+    - attendance% for sem [7th](sem)
+    - attendance for sem [8th](sem)
+    - check my attendance% for sem [1st](sem)
+    - check my attendance for sem [2nd](sem)
+    - check my attendance percentage for sem [3rd](sem)
+    - check my attendance% for sem [4th](sem)
+    - check my attendance for sem [5th](sem)
+    - check my attendance percentage for sem [6th](sem)
+    - check my attendance% for sem [7th](sem)
+    - check my attendance for sem [8th](sem)
+    - give me my attendance for sem [1st](sem)
+    - give me my attendance percentage for sem [2nd](sem)
+    - give me my attendance% for sem [3rd](sem)
+    - give me my attendance for sem [4th](sem)
+    - give me my attendance percentage for sem [5th](sem)
+    - give me my attendance% for sem [6th](sem)
+    - give me my attendance percentage for sem [7th](sem)
+    - give me my attendance% for sem [8th](sem)
+    - provide my attendance% for sem [1st](sem)
+    - provide my attendance for sem [2nd](sem)
+    - provide my attendance percentage for sem [3rd](sem)
+    - provide my attendance% for sem [4th](sem)
+    - provide my attendance for sem [5th](sem)
+    - provide my attendance percentage for sem [6th](sem)
+    - provide my attendance% for sem [7th](sem)
+    - provide my attendance for sem [8th](sem)
+    - show my attendance% for sem [1st](sem)
+    - show my attendance for sem [2nd](sem)
+    - show my attendance percentage for sem [3rd](sem)
+    - show my attendance% for sem [4th](sem)
+    - show my attendance for sem [5th](sem)
+    - show my attendance percentage for sem [6th](sem)
+    - show my attendance% for sem [7th](sem)
+    - show my attendance for sem [8th](sem)
+    - display my attendance% for sem [1st](sem)
+    - display my attendance for sem [2nd](sem)
+    - display my attendance percentage for sem [3rd](sem)
+    - display my attendance% for sem [4th](sem)
+    - display my attendance for sem [5th](sem)
+    - display my attendance percentage for sem [6th](sem)
+    - display my attendance% for sem [7th](sem)
+    - display my attendance for sem [8th](sem)
+    - get my attendance% for sem [1st](sem)
+    - get my attendance for sem [2nd](sem)
+    - get my attendance percentage for sem [3rd](sem)
+    - get my attendance% for sem [4th](sem)
+    - get my attendance for sem [5th](sem)
+    - get my attendance percentage for sem [6th](sem)
+    - get my attendance% for sem [7th](sem)
+    - get my attendance for sem [8th](sem)
+    - retrieve my attendance% for sem [1st](sem)
+    - retrieve my attendance for sem [2nd](sem)
+    - retrieve my attendance percentage for sem [3rd](sem)
+    - retrieve my attendance% for sem [4th](sem)
+    - retrieve my attendance for sem [5th](sem)
+    - retrieve my attendance percentage for sem [6th](sem)
+    - retrieve my attendance% for sem [7th](sem)
+    - retrieve my attendance for sem [8th](sem)
+    - fetch my attendance% for sem [1st](sem)
+    - fetch my attendance for sem [2nd](sem)
+    - fetch my attendance percentage for sem [3rd](sem)
+    - fetch my attendance% for sem [4th](sem)
+    - fetch my attendance for sem [5th](sem)
+    - fetch my attendance percentage for sem [6th](sem)
+    - fetch my attendance% for sem [7th](sem)
+    - fetch my attendance for sem [8th](sem)
+    - obtain my attendance% for sem [1st](sem)
+    - obtain my attendance for sem [2nd](sem)
+    - obtain my attendance percentage for sem [3rd](sem)
+    - obtain my attendance% for sem [4th](sem)
+    - obtain my attendance for sem [5th](sem)
+    - obtain my attendance percentage for sem [6th](sem)
+    - obtain my attendance% for sem [7th](sem)
+    - obtain my attendance for sem [8th](sem)
+    - view my attendance% for sem [1st](sem)
+    - view my attendance for sem [2nd](sem)
+    - view my attendance percentage for sem [3rd](sem)
+    - view my attendance% for sem [4th](sem)
+    - view my attendance for sem [5th](sem)
+    - view my attendance percentage for sem [6th](sem)
+    - view my attendance% for sem [7th](sem)
+    - view my attendance for sem [8th](sem)
+        - what is my attendance% for sem [first](sem)
+    - what is my attendance for sem [second](sem)
+    - what is my attendance percentage for sem [third](sem)
+    - what is my attendance% for sem [fourth](sem)
+    - what is my attendance for sem [fifth](sem)
+    - what is my attendance percentage for sem [sixth](sem)
+    - what is my attendance% for sem [seventh](sem)
+    - what is my attendance for sem [eighth](sem)
+    - my attendance% for sem [first](sem)
+    - my attendance for sem [second](sem)
+    - my attendance percentage for sem [third](sem)
+    - my attendance% for sem [fourth](sem)
+    - my attendance for sem [fifth](sem)
+    - my attendance percentage for sem [sixth](sem)
+    - my attendance% for sem [seventh](sem)
+    - my attendance for sem [eighth](sem)
+    - How much is my attendance% for sem [first](sem)
+    - How much is my attendance for sem [second](sem)
+    - How much is my attendance percentage for sem [third](sem)
+    - How much is my attendance% for sem [fourth](sem)
+    - How much is my attendance for sem [fifth](sem)
+    - How much is my attendance percentage for sem [sixth](sem)
+    - How much is my attendance% for sem [seventh](sem)
+    - How much is my attendance for sem [eighth](sem)
+    - tell me my attendance% for sem [first](sem)
+    - tell me my attendance for sem [second](sem)
+    - tell me my attendance percentage for sem [third](sem)
+    - tell me my attendance% for sem [fourth](sem)
+    - tell me my attendance for sem [fifth](sem)
+    - tell me my attendance percentage for sem [sixth](sem)
+    - tell me my attendance% for sem [seventh](sem)
+    - tell me my attendance for sem [eighth](sem)
+    - attendance% for sem [first](sem)
+    - attendance for sem [second](sem)
+    - attendance percentage for sem [third](sem)
+    - attendance% for sem [fourth](sem)
+    - attendance for sem [fifth](sem)
+    - attendance percentage for sem [sixth](sem)
+    - attendance% for sem [seventh](sem)
+    - attendance for sem [eighth](sem)
+    - check my attendance% for sem [first](sem)
+    - check my attendance for sem [second](sem)
+    - check my attendance percentage for sem [third](sem)
+    - check my attendance% for sem [fourth](sem)
+    - check my attendance for sem [fifth](sem)
+    - check my attendance percentage for sem [sixth](sem)
+    - check my attendance% for sem [seventh](sem)
+    - check my attendance for sem [eighth](sem)
+    - give me my attendance for sem [first](sem)
+    - give me my attendance percentage for sem [second](sem)
+    - give me my attendance% for sem [third](sem)
+    - give me my attendance for sem [fourth](sem)
+    - give me my attendance percentage for sem [fifth](sem)
+    - give me my attendance% for sem [sixth](sem)
+    - give me my attendance percentage for sem [seventh](sem)
+    - give me my attendance% for sem [eighth](sem)
+    - show my attendance for sem [first](sem)
+    - show my attendance percentage for sem [second](sem)
+    - show my attendance% for sem [third](sem)
+    - show my attendance for sem [fourth](sem)
+    - show my attendance percentage for sem [fifth](sem)
+    - show my attendance% for sem [sixth](sem)
+    - show my attendance percentage for sem [seventh](sem)
+    - show my attendance% for sem [eighth](sem)
+    - display my attendance for sem [first](sem)
+    - display my attendance percentage for sem [second](sem)
+    - display my attendance% for sem [third](sem)
+    - display my attendance for sem [fourth](sem)
+    - display my attendance percentage for sem [fifth](sem)
+    - display my attendance% for sem [sixth](sem)
+    - display my attendance percentage for sem [seventh](sem)
+    - display my attendance% for sem [eighth](sem)
+    - get my attendance for sem [first](sem)
+    - get my attendance percentage for sem [second](sem)
+    - get my attendance% for sem [third](sem)
+    - get my attendance for sem [fourth](sem)
+    - get my attendance percentage for sem [fifth](sem)
+    - get my attendance% for sem [sixth](sem)
+    - get my attendance percentage for sem [seventh](sem)
+    - get my attendance% for sem [eighth](sem)
+    - retrieve my attendance for sem [first](sem)
+    - retrieve my attendance percentage for sem [second](sem)
+    - retrieve my attendance% for sem [third](sem)
+    - retrieve my attendance for sem [fourth](sem)
+    - retrieve my attendance percentage for sem [fifth](sem)
+    - retrieve my attendance% for sem [sixth](sem)
+    - retrieve my attendance percentage for sem [seventh](sem)
+    - retrieve my attendance% for sem [eighth](sem)
+    - fetch my attendance for sem [first](sem)
+    - fetch my attendance percentage for sem [second](sem)
+    - fetch my attendance% for sem [third](sem)
+    - fetch my attendance for sem [fourth](sem)
+    - fetch my attendance percentage for sem [fifth](sem)
+    - fetch my attendance% for sem [sixth](sem)
+    - fetch my attendance percentage for sem [seventh](sem)
+    - fetch my attendance% for sem [eighth](sem)
+    - obtain my attendance for sem [first](sem)
+    - obtain my attendance percentage for sem [second](sem)
+    - obtain my attendance% for sem [third](sem)
+    - obtain my attendance for sem [fourth](sem)
+    - obtain my attendance percentage for sem [fifth](sem)
+    - obtain my attendance% for sem [sixth](sem)
+    - obtain my attendance percentage for sem [seventh](sem)
+    - obtain my attendance% for sem [eighth](sem)
+    - calculate my attendance for sem [first](sem)
+    - calculate my attendance percentage for sem [second](sem)
+    - calculate my attendance% for sem [third](sem)
+    - calculate my attendance for sem [fourth](sem)
+    - calculate my attendance percentage for sem [fifth](sem)
+    - calculate my attendance% for sem [sixth](sem)
+    - calculate my attendance percentage for sem [seventh](sem)
+    - calculate my attendance% for sem [eighth](sem)
+    - find my attendance for sem [first](sem)
+    - find my attendance percentage for sem [second](sem)
+    - find my attendance% for sem [third](sem)
+    - find my attendance for sem [fourth](sem)
+    - find my attendance percentage for sem [fifth](sem)
+    - find my attendance% for sem [sixth](sem)
+    - find my attendance percentage for sem [seventh](sem)
+    - find my attendance% for sem [eighth](sem)
+    - determine my attendance for sem [first](sem)
+    - determine my attendance percentage for sem [second](sem)
+    - determine my attendance% for sem [third](sem)
+    - determine my attendance for sem [fourth](sem)
+    - determine my attendance percentage for sem [fifth](sem)
+    - determine my attendance% for sem [sixth](sem)
+    - determine my attendance percentage for sem [seventh](sem)
+    - determine my attendance% for sem [eighth](sem)
+    - provide my attendance for sem [first](sem)
+    - provide my attendance percentage for sem [second](sem)
+    - provide my attendance% for sem [third](sem)
+    - provide my attendance for sem [fourth](sem)
+    - provide my attendance percentage for sem [fifth](sem)
+    - provide my attendance% for sem [sixth](sem)
+    - provide my attendance percentage for sem [seventh](sem)
+    - provide my attendance% for sem [eighth](sem)
+    - supply my attendance for sem [first](sem)
+    - supply my attendance percentage for sem [second](sem)
+    - supply my attendance% for sem [third](sem)
+    - supply my attendance for sem [fourth](sem)
+    - supply my attendance percentage for sem [fifth](sem)
+    - supply my attendance% for sem [sixth](sem)
+    - supply my attendance percentage for sem [seventh](sem)
+    - supply my attendance% for sem [eighth](sem)
+    - give my attendance for sem [first](sem)
+    - give my attendance percentage for sem [second](sem)
+    - give my attendance% for sem [third](sem)
+    - give my attendance for sem [fourth](sem)
+    - give my attendance percentage for sem [fifth](sem)
+    - give my attendance% for sem [sixth](sem)
+    - give my attendance percentage for sem [seventh](sem)
+    - give my attendance% for sem [eighth](sem)
+    - share my attendance for sem [first](sem)
+    - share my attendance percentage for sem [second](sem)
+    - share my attendance% for sem [third](sem)
+    - share my attendance for sem [fourth](sem)
+    - share my attendance percentage for sem [fifth](sem)
+    - share my attendance% for sem [sixth](sem)
+    - share my attendance percentage for sem [seventh](sem)
+    - share my attendance% for sem [eighth](sem)
+    - present my attendance for sem [first](sem)
+    - present my attendance percentage for sem [second](sem)
+    - present my attendance% for sem [third](sem)
+    - present my attendance for sem [fourth](sem)
+    - present my attendance percentage for sem [fifth](sem)
+    - present my attendance% for sem [sixth](sem)
+    - present my attendance percentage for sem [seventh](sem)
+    - present my attendance% for sem [eighth](sem)
+#just %
+- intent: attendance_detail
+  examples: |
+    - show me the detailed attendance for sem [5](sem)
+#detailed attendance

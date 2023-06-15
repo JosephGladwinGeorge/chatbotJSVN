@@ -22,15 +22,16 @@ pipeline:
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
-  - name: RegexEntityExtractor
-    case_sensitive: False
-    use_lookup_tables: True
-    # lookup_tables:
-    #   sub : dataset/subjectcode.csv
+  # - name: RegexEntityExtractor
+  #   case_sensitive: False
+  #   use_lookup_tables: True
+  #   # lookup_tables:
+  #   #   sub : dataset/subjectcode.csv
     use_regexes: True
   - name: DIETClassifier
     epochs: 100
-    entity_recognition: False
+    use_lookup_tables: True
+    #entity_recognition: False
     #constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
